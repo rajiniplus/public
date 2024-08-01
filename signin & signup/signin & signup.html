@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top: 100px; text-align: center;">
+            <div class="col-md-12">
+                <div class="card sign-in" style="border-radius: 15px;">
+                    <div id="main_div" style="display: flex;">
+                        <div id="div1-white"></div>
+                        <div id="div1">
+                            <h1 class="card-title">Sign in</h1>
+                            <div style="display: flex;">
+                                <img class="social-sign-in" src="static/facebook.png" alt="facebook">
+                                <img class="social-sign-in" src="static/google-plus.png" alt="facebook">
+                                <img class="social-sign-in" src="static/linkedin.png" alt="facebook">
+                            </div>
+
+                            <form style="width: 70%;">
+                                <div class="form-group">
+                                    <h6 style="padding: 10px 0px; font-weight: 400;">or use your account</h6>
+
+                                    <input type="email" class="form-control"
+                                        style="background-color: rgb(253, 241, 241);" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" style="background-color: rgb(253, 241, 241);"
+                                        class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <h5 style="padding: 10px 0px; font-weight: 400;">Forgot your password?</h5>
+                                <button type="submit" class="custom_btn btn1">SIGN IN</button>
+                            </form>
+                        </div>
+                        <div id="div2">
+                            <div id="red-frame"></div>
+                            <div id="div3-white"></div>
+                            <div id="div3">
+                                <h1 class="card-title">Create Account</h1>
+                                <div style="display: flex; justify-content: center;">
+                                    <img class="social-sign-in" src="static/facebook.png" alt="facebook">
+                                    <img class="social-sign-in" src="static/google-plus.png" alt="facebook">
+                                    <img class="social-sign-in" src="static/linkedin.png" alt="facebook">
+                                </div>
+
+                                <form>
+                                    <div class="form-group">
+                                        <h6 style="padding: 10px 0px; font-weight: 400;">or use your email for
+                                            registration</h6>
+                                        <input type="text" class="form-control"
+                                            style="background-color: rgb(253, 241, 241);" id="name" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control"
+                                            style="background-color: rgb(253, 241, 241);" id="email"
+                                            placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" style="background-color: rgb(253, 241, 241);"
+                                            class="form-control" id="password" placeholder="Password">
+                                    </div>
+                                    <div>&nbsp;</div>
+                                    <button type="submit" class="custom_btn btn3">SIGN UP</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="red-frame-content"
+                            style="width: 50%; position: absolute; display: flex; justify-content: center; height: 100%; align-items: center; top: 50%; left: 25%; transform: translate(-50%, -50%);">
+
+                            <div id="content-sign-in" style="width: 70%;  height: 45%; ">
+                                <h1 class="card-title" style="color: white;">Welcome, Back!</h1>
+                                &nbsp;
+                                <h5 style="color: white;">To keep connected with us please login with your personal info
+                                </h5>
+                                <h3>&nbsp;</h3>
+                                <button type="button" class="custom_btn2 btn2">SIGN IN</button>
+                            </div>
+                            <div id="content-sign-up" style="width: 70%;  height: 45%; position: absolute; left: 115%;">
+                                <h1 class="card-title" style="color: white;">Hello, Friend!</h1>
+                                &nbsp;
+                                <h5 style="color: white;">Enter your personal details and start your journey with us
+                                </h5>
+                                <h3>&nbsp;</h3>
+                                <button type="button" class="custom_btn2 btn2">SIGN UP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP1dBzrkEUVs2GfC7c2iW8ptKzyT1llbK0bD9K8jTQQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#div1").css({
+                "z-index": "-1",
+                "left": "50%"
+            });
+            $("#content-sign-up").hide();
+
+            let signin_btn = $("#content-sign-in button");
+            signin_btn.click(() => {
+                $("#red-frame").css({
+                    "left": "50%",
+                    "border-radius": "0px 15px 15px 0px"
+                });
+                $("#content-sign-in").hide();
+                $("#div3").css({
+                    "right": "55%"
+                });
+                $("#div1").css({
+                    "left": "0%",
+                    "z-index": "1"
+                });
+
+                setTimeout(() => {
+                    $("#content-sign-up").show();
+                }, 100);
+            });
+
+            let signup_btn = $("#content-sign-up button");
+            signup_btn.click(() => {
+                $("#red-frame").css({
+                    "left": "0%",
+                    "border-radius": "15px 0 0 15px"
+                });
+                $("#content-sign-up").hide();
+                $("#div3").css({
+                    "right": "7.5%"
+                });
+                $("#div1").css({
+                    "left": "50%"
+                });
+
+                setTimeout(() => {
+                    $("#content-sign-in").show();
+                    console.log("clicked...");
+                }, 100);
+
+                setTimeout(() => {
+                    $("#div1").css({
+                        "z-index": "-1"
+                    });
+                }, 7);
+            });
+        });
+    </script>
+</body>
+
+</html>

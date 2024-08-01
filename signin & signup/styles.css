@@ -1,0 +1,129 @@
+#div3-white {
+    height: 100%;
+    width: 50%;
+    right: 0px;
+    position: absolute;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+}
+
+#div1-white {
+    height: 100%;
+    width: 50%;
+    left: 0px;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    z-index: 1;
+}
+
+#red-frame-content {
+    z-index: 1;
+}
+
+.social-sign-in {
+    width: 40px;
+    margin: 10px;
+}
+
+.custom_btn {
+    width: 50%;
+    height: 25%;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.custom_btn2 {
+    width: 50%;
+    height: 20%;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.custom_btn2:focus,
+.custom_btn2:active {
+    outline: green;
+    background-color: white;
+    color: red;
+}
+
+.btn2 {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid white;
+}
+
+.btn3 {
+    height: 60px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.btn1 {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+#main_div {
+    height: 70vh;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#div1,
+#div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+#div1 {
+    padding-bottom: 60px;
+    width: 50%;
+    position: absolute;
+    transition: 1s;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+#div3 {
+    width: 35%;
+    padding-bottom: 20px;
+    position: absolute;
+    transition: 1s;
+    right: 7.5%;
+}
+
+#red-frame {
+    background-image: linear-gradient(to right, #ff0033, #f5154d);
+    position: absolute;
+    width: 50%;
+    left: 0px;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    transition: 1s;
+    z-index: 1;
+}
+
+#div2 {
+    border-radius: 0 15px 15px 0;
+    transition: 0s;
+}
+
+#content-sign-in {
+    position: absolute;
+}
+
+#content-sign-up {
+    z-index: 3;
+}
